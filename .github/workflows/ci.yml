@@ -117,7 +117,7 @@ jobs:
           key: yarn-${{ hashFiles('yarn.lock') }}
       - name: Install
         run: yarn install
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: babel-artifact
       - name: Lint
@@ -154,7 +154,7 @@ jobs:
           yarn add --dev jest@24
           # Pin stack-utils to 1.0.2 https://github.com/tapjs/stack-utils/issues/56
           yarn set resolution stack-utils@npm:^1.0.1 1.0.2
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: babel-artifact
       - name: Generate runtime helpers
@@ -225,7 +225,7 @@ jobs:
           key: yarn-${{ hashFiles('yarn.lock') }}
       - name: Install
         run: yarn install
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: babel-artifact
       - name: Generate runtime helpers
@@ -256,7 +256,7 @@ jobs:
           key: yarn-${{ hashFiles('yarn.lock') }}
       - name: Install
         run: yarn install
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: babel-artifact
       - name: Download tests
